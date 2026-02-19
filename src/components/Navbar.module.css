@@ -195,6 +195,7 @@
 }
 
 .mobileLink {
+    display: block;
     font-weight: 600;
     font-size: 16px;
     padding: 14px 0;
@@ -258,5 +259,13 @@
 
     .mobileMenu {
         display: flex;
+    }
+
+    .logoImg {
+        height: 20px;
+    }
+
+    .pill {
+        gap: 12px;
     }
 }

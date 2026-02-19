@@ -42,7 +42,7 @@ export default function Navbar() {
                     layout
                     animate={{
                         maxWidth: scrolled ? 680 : 1200,
-                        padding: scrolled ? "6px 14px" : "14px 28px",
+                        padding: scrolled ? "6px 32px" : "14px 32px",
                         borderRadius: scrolled ? 9999 : 24,
                         backgroundColor: scrolled
                             ? "rgba(255, 255, 255, 0.85)"

@@ -400,6 +400,14 @@
     .metaBox {
         width: fit-content;
     }
+
+    .pauseHint {
+        bottom: 8px;
+        right: 8px;
+        padding: 4px 10px;
+        font-size: 0.7rem;
+        gap: 4px;
+    }
 }
 
 /* ================================ */

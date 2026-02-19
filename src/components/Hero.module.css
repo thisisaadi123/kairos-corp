@@ -204,9 +204,9 @@
 }
 
 /* Small mobile fixes */
-@media (max-width: 380px) {
+@media (max-width: 375px) {
     .hero {
-        padding: 100px 16px 48px;
+        padding: 90px 16px 40px;
     }
 
     .title {
