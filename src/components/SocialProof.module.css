@@ -1,0 +1,114 @@
+.section {
+    padding: 120px 0 80px;
+}
+
+/* Stats grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 24px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    /* Neubrutalism offset shadow */
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+.statCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.08), 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.statValue {
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+.statLabel {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Divider */
+.divider {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 40px;
+    background: linear-gradient(90deg, var(--purple), var(--red));
+    border-radius: 2px;
+}
+
+/* Label */
+.label {
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    margin: 0 0 40px;
+    opacity: 0.7;
+}
+
+/* Infinite Slider */
+.slider {
+    padding: 16px 0;
+}
+
+.client {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    opacity: 0.4;
+    white-space: nowrap;
+    padding: 0 24px;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.client:hover {
+    opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0 60px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .statCard {
+        padding: 24px 16px;
+    }
+
+    .statValue {
+        font-size: 1.8rem;
+    }
+
+    .client {
+        font-size: 1rem;
+        padding: 0 16px;
+    }
+}

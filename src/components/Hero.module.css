@@ -1,0 +1,204 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 24px 80px;
+}
+
+/* Aurora background */
+.auroraBg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Content — split layout */
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 56px;
+    padding: 0 clamp(20px, 5vw, 48px);
+}
+
+/* Left text side */
+.textSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Title */
+.title {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    color: var(--text-primary);
+    margin: 0 0 24px;
+    text-align: left;
+    letter-spacing: -0.02em;
+}
+
+.titleInner {
+    display: inline;
+}
+
+.titleGradient {
+    display: inline-block;
+    background: linear-gradient(135deg, #EF4060 0%, #D97706 35%, #7C3AED 70%, #059669 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: heroGradientShift 5s ease-in-out infinite;
+    padding-right: 0.15em;
+}
+
+@keyframes heroGradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Oscillating color pills */
+.pills {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    display: inline-block;
+    padding: 8px 22px;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--red);
+}
+
+/* Subtitle — improved typography */
+.subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--text-primary);
+    max-width: 480px;
+    margin: 0 0 28px;
+    line-height: 1.7;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.subtitle strong {
+    color: var(--text-primary);
+    font-weight: 800;
+    background: linear-gradient(135deg, #EF4060, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Buttons — now inside textSide */
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.ctaBtn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Right image side */
+.imageSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageFrame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.heroImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 900px) {
+    .hero {
+        padding: 120px 20px 60px;
+        min-height: auto;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .textSide {
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .pills {
+        justify-content: center;
+    }
+
+    .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .imageFrame {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet breakpoint refinement */
+@media (min-width: 901px) and (max-width: 1100px) {
+    .title {
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    }
+
+    .content {
+        gap: 32px;
+    }
+}

@@ -1,0 +1,144 @@
+.footer {
+    background: var(--bg-base);
+    padding: 0 0 var(--space-md);
+    position: relative;
+}
+
+/* Gradient top line */
+.gradLine {
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--red), var(--yellow), var(--green));
+    margin-bottom: var(--space-lg);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: var(--space-lg);
+}
+
+/* Brand */
+.brand {
+    max-width: 280px;
+}
+
+.brandRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.brandName {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.brandDesc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Column */
+.column h4 {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+.column a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.25s ease, padding-left 0.25s ease;
+    display: inline-block;
+}
+
+.column a:hover {
+    color: var(--purple);
+    padding-left: 4px;
+}
+
+/* Bottom */
+.bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--space-md);
+}
+
+.bottomInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* LinkedIn link in Company column */
+.linkedInLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.linkedInLink svg {
+    flex-shrink: 0;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .brand {
+        grid-column: 1 / -1;
+    }
+
+    .bottomInner {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

@@ -1,0 +1,425 @@
+.games {
+    padding: 60px 0 120px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Background decoration */
+.bgDeco {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bgCircle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.03) 0%, transparent 70%);
+    top: 20%;
+    right: -150px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+    position: relative;
+    z-index: 1;
+}
+
+.heading {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+}
+
+.headingGradient {
+    background: linear-gradient(135deg, #EF4060 0%, #D97706 35%, #7C3AED 70%, #059669 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.sub {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.sub strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Game cards list */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Accent bar */
+.accentBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    transform-origin: left;
+}
+
+/* Logo section — badge left, logo right */
+.logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px 40px 0;
+}
+
+.logoContainer {
+    flex-shrink: 0;
+}
+
+.gameLogo {
+    height: 140px;
+    width: auto;
+    max-width: 420px;
+}
+
+.badgeRow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.indexBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+/* Card inner — side by side */
+.cardInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 24px 40px 40px;
+    align-items: start;
+}
+
+.cardReversed {
+    direction: rtl;
+}
+
+.cardReversed>* {
+    direction: ltr;
+}
+
+/* Description side */
+.descSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Game name — clean, strong typography (no gradient) */
+.gameName {
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+/* Premise/description — refined readability */
+.premise {
+    font-size: 0.96rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin: 0 0 20px;
+    max-width: 500px;
+    font-weight: 420;
+    letter-spacing: 0.005em;
+}
+
+/* Meta boxes */
+.meta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.metaBox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #4b5563;
+    font-weight: 550;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.metaBox svg {
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+/* Skill pills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.skillPill {
+    font-size: 0.73rem;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+}
+
+/* Button */
+.gameBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.gameBtn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Video side */
+.videoSide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.videoWrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: relative;
+    background: #0f0f17;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoWrapper:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.videoActive {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.videoPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.videoOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.videoOverlayHidden {
+    opacity: 0;
+}
+
+.playBtn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.videoWrapper:hover .playBtn {
+    transform: scale(1.08);
+}
+
+.playBtn svg {
+    margin-left: 3px;
+}
+
+.videoLabel {
+    font-size: 0.73rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pauseHint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* ================================ */
+/*  Mobile                          */
+/* ================================ */
+@media (max-width: 768px) {
+    .games {
+        padding: 80px 0;
+    }
+
+    .logoSection {
+        flex-direction: column-reverse;
+        gap: 14px;
+        padding: 24px 20px 0;
+        align-items: flex-start;
+    }
+
+    .gameLogo {
+        height: 90px;
+        max-width: 300px;
+    }
+
+    .badgeRow {
+        flex-wrap: wrap;
+    }
+
+    .tagline {
+        white-space: normal;
+    }
+
+    .cardInner,
+    .cardReversed {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px 20px 28px;
+        direction: ltr;
+    }
+
+    .gameName {
+        font-size: 1.4rem;
+    }
+
+    .videoWrapper {
+        aspect-ratio: 16 / 9;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .metaBox {
+        width: fit-content;
+    }
+}
+
+/* ================================ */
+/*  Tablet                          */
+/* ================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logoSection {
+        padding: 24px 28px 0;
+    }
+
+    .cardInner {
+        gap: 24px;
+        padding: 20px 28px 32px;
+    }
+
+    .gameLogo {
+        height: 68px;
+    }
+
+    .gameName {
+        font-size: 1.5rem;
+    }
+}
