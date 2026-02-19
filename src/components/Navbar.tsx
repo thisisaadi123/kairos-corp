@@ -41,7 +41,7 @@ export default function Navbar() {
                     className={styles.pill}
                     layout
                     animate={{
-                        maxWidth: scrolled ? 680 : 1200,
+                        maxWidth: scrolled ? 760 : 1200,
                         padding: scrolled ? "6px 32px" : "14px 32px",
                         borderRadius: scrolled ? 9999 : 24,
                         backgroundColor: scrolled
