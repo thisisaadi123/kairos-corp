@@ -39,13 +39,15 @@ export default function Footer() {
                 {/* Brand */}
                 <motion.div className={styles.brand} variants={childVariants}>
                     <div className={styles.brandRow}>
-                        <Image
-                            src="/kairos-logo.png"
-                            alt="Kairos"
-                            width={160}
-                            height={26}
-                            style={{ objectFit: "contain" }}
-                        />
+                        <a href="https://playkairos.com/" target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src="/kairos-logo.png"
+                                alt="Kairos"
+                                width={160}
+                                height={26}
+                                style={{ objectFit: "contain" }}
+                            />
+                        </a>
                     </div>
                     <p className={styles.brandDesc}>
                         Game-based experiences that build skills, shift behaviours, and spark lasting impact.
