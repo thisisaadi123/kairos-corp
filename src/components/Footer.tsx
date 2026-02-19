@@ -93,19 +93,7 @@ export default function Footer() {
                 </motion.div>
             </motion.div>
 
-            {/* Bottom bar */}
-            <motion.div
-                className={styles.bottom}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 }}
-            >
-                <div className="container">
-                    <div className={styles.bottomInner}>
-                        <p className={styles.copyright}>© {new Date().getFullYear()} Kairos. All rights reserved.</p>
-                    </div>
-                </div>
-            </motion.div>
+
         </footer>
     );
 }
